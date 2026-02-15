@@ -2,12 +2,17 @@ import requests
 import json
 import pandas as pd
 import os
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
 import logging
 
 
 logging.basicConfig(filename='pipeline.log',
                     level=logging.INFO,
                     format='%(levelname)s: %(message)s')
+
+
+load_dotenv()
 
 
 def extract(URL, savepath):
@@ -74,10 +79,10 @@ def transform(filepath):
         normalized_data = pd.DataFrame(feature_cols)
 
         normalized_data.columns = ['continents', 'official_name',
-                                   'common_name', 'independent', 'unMember',
-                                   'languages', 'lang_count', 'root',
-                                   'suffixes', 'region', 'subregion', 'area',
-                                   'population']
+                                    'common_name', 'independent', 'unMember',
+                                    'languages', 'lang_count', 'root',
+                                    'suffixes', 'region', 'subregion',
+                                    'area', 'population']
 
         normalized_data[['suffixes', 'continents']] = normalized_data[
             ['suffixes', 'continents']].astype(str).apply(
@@ -89,10 +94,24 @@ def transform(filepath):
         logging.info(f'can not transform data{e}')
 
 
-def load(clean_data):
-    clean_data.to_csv(transformed_data, index=False)
-    cleaan_data.to_sql = (
-        name='countries_data',
+password = os.getenv('POSTGRES_PASSWORD')
+user = 'muminah'
+db = 'countries_db'
+connection_string = f'postgresql://user:{password}@localhost:5432/db'
+engine = create_engine(connection_string)
+
+try:
+    conn = engine.connect()
+    print('connection to the database was succesful')
+    conn.close()
+except Exception as e:
+    print('connection failed', e)
+
+
+def load(clean_data, engine):
+    clean_data.to_csv('data/clean_countries_data.csv', index=False)
+    clean_data.to_sql(
+        name='countries',
         con=engine,
         if_exists='append',
         index=False

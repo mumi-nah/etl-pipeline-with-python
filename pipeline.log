@@ -1,0 +1,85 @@
+2026-02-16 14:29:55,932: INFO: Request to url returned: 200
+2026-02-16 14:29:55,948: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 14:30:12,623: INFO: Request to url returned: 200
+2026-02-16 14:30:12,634: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 14:37:44,646: INFO: Request to url returned: 200
+2026-02-16 14:37:44,652: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 14:43:39,971: INFO: Request to url returned: 200
+2026-02-16 14:43:39,976: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 19:11:12,549: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:12:31,775: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:12:31,779: INFO: Data transformed succesfully!
+2026-02-16 19:13:01,225: ERROR: Error: data/raw_countries_data.json not found
+2026-02-16 19:13:01,226: INFO: Data transformed succesfully!
+2026-02-16 19:14:47,299: ERROR: Error: data/raw_countries_data.json not found
+2026-02-16 19:15:25,684: INFO: Request to url returned: 200
+2026-02-16 19:15:25,686: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 19:15:38,208: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:16:11,224: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:16:55,334: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:20:03,746: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:24:19,156: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:42:07,895: ERROR: Cannot transform data: 'NoneType' object is not iterable
+2026-02-16 19:51:53,818: INFO: Data transformed succesfully!
+2026-02-16 19:53:10,266: INFO: Data transformed succesfully!
+2026-02-16 20:04:10,509: ERROR: Error: data/raw_countries_data.json not found
+2026-02-16 20:17:02,380: INFO: connection to the database was succesful
+2026-02-16 20:17:23,390: INFO: connection to the database was succesful
+2026-02-16 21:09:23,819: ERROR: Error: data/raw_countries_data.json not found
+2026-02-16 21:09:51,837: INFO: Request to url returned: 200
+2026-02-16 21:09:51,840: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 21:09:58,313: INFO: Data transformed succesfully!
+2026-02-16 21:10:09,460: INFO: Data transformed succesfully!
+2026-02-16 21:29:32,755: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:29:46,062: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:30:49,401: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:35:30,367: INFO: user=None, host=None, port=None, db=None
+2026-02-16 21:35:30,369: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:38:17,072: INFO: user=None, host=None, port=None, db=None
+2026-02-16 21:38:17,073: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:39:01,063: INFO: user=None, host=None, port=None, db=None
+2026-02-16 21:39:01,065: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:39:30,978: INFO: user=None, host=None, port=None, db=None
+2026-02-16 21:39:30,979: ERROR: Failed to create engine: invalid literal for int() with base 10: 'None'
+2026-02-16 21:40:52,663: INFO: Request to url returned: 200
+2026-02-16 21:40:52,665: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 21:43:26,587: INFO: Request to url returned: 200
+2026-02-16 21:43:26,589: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 21:44:15,105: INFO: Request to url returned: 200
+2026-02-16 21:44:15,107: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 21:44:25,699: INFO: Request to url returned: 200
+2026-02-16 21:44:25,702: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:02:04,139: INFO: continents,name,independent,unMember,languages,idd,region,subregion,area,population
+2026-02-16 22:02:04,143: INFO: Request to url returned: 200
+2026-02-16 22:02:04,145: INFO: Data successfully saved to data/raw_countries_data.json2026-02-16 22:16:46,236: INFO: name,continents,independent,unMember,languages,idd,    region,subregion,area,population
+2026-02-16 22:16:46,236: INFO: Request to url returned: 200
+2026-02-16 22:16:46,279: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:18:51,633: INFO: name,independent,unMember,idd,region,subregion,languages,area,population,continents
+2026-02-16 22:18:51,633: INFO: Request to url returned: 200
+2026-02-16 22:18:51,636: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:26:41,428: INFO: name,independent,unMember,idd,region,subregion,languages,area,population,continents
+2026-02-16 22:26:41,429: INFO: Request to url returned: 200
+2026-02-16 22:26:41,431: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:27:32,819: INFO: name,independent,unMember,idd,region,subregion,languages,area,population,continents
+2026-02-16 22:27:32,819: INFO: Request to url returned: 200
+2026-02-16 22:27:32,853: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:27:46,458: INFO: name,independent,unMember,idd,region,subregion,languages,area,population,continents
+2026-02-16 22:27:46,459: INFO: Request to url returned: 200
+2026-02-16 22:27:46,495: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:28:31,698: ERROR: Request failed: name 'fieldnames' is not defined
+2026-02-16 22:28:49,918: INFO: Request to url returned: 200
+2026-02-16 22:28:49,968: INFO: Data successfully saved to data/raw_countries_data.json
+2026-02-16 22:29:09,175: INFO: Data transformed succesfully!
+2026-02-16 22:29:28,940: INFO: user=muminah, host=localhost, port=5432, db=countries_db
+2026-02-16 22:29:29,309: INFO: Database engine created successfully!
+2026-02-16 22:30:02,325: INFO: user=muminah, host=localhost, port=5432, db=countries_db
+2026-02-16 22:30:02,411: INFO: Database engine created successfully!
+2026-02-16 22:30:02,412: ERROR: Failed to load data, 'str' object has no attribute 'to_csv'
+2026-02-16 22:33:08,396: INFO: Database engine created successfully!
+2026-02-16 22:33:08,396: ERROR: Failed to load data, 'str' object has no attribute 'to_csv'
+2026-02-16 22:37:09,476: INFO: Database engine created successfully!
+2026-02-16 22:37:09,482: INFO: Data saved to csv at data/clean_countries_data
+2026-02-16 22:37:09,782: INFO: Data loaded into postgres succeesfully!
+2026-02-16 22:37:56,802: INFO: Database engine created successfully!
+2026-02-16 22:37:56,808: INFO: Data saved to csv at data/clean_countries_data
+2026-02-16 22:37:57,017: INFO: Data loaded into postgres succeesfully!

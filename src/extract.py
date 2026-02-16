@@ -7,9 +7,7 @@ This script extracts countries data from the API. It collects:
 - independent
 - unMember
 - languages
-- lang_count
-- root
-- suffixes
+- idd
 - region
 - subregion
 - area
@@ -24,13 +22,13 @@ import logging
 
 logging.basicConfig(
     filename='pipeline.log',
-    levelname=logging.INFO,
-    format='%(levelname)s: %(message)s'
+    level=logging.INFO,
+    format='%(asctime)s: %(levelname)s: %(message)s'
 )
 
-fieldnames = 'columns_to_be_extracted'
-api_url = 'https://restcountries.com/v3.1/all?fields=fieldnames'
-filepath = 'path_to_save_file'
+api_url = "https://restcountries.com/v3.1/all?fields=name,independent,\
+unMember,idd,region,subregion,languages,area,population,continents"
+filepath = 'data/raw_countries_data.json'
 
 
 def extract(api_url, filepath):
@@ -44,13 +42,20 @@ def extract(api_url, filepath):
     '''
     try:
         response = requests.get(api_url)
-        logging.info(f'request to url returned: {response.status_code}')
+        logging.info(f'Request to url returned: {response.status_code}')
         response.raise_for_status()
         data = response.json()
+
         with open(filepath, 'w') as file:
             json.dump(data, file, indent=2)
-        logging.info(f'data successfully saved to {filepath}')
+
+        logging.info(f'Data successfully saved to {filepath}')
         return data
 
     except Exception as e:
-        logging.info(f'request failed: {e}')
+        logging.error(f'Request failed: {e}')
+        return None
+
+
+if __name__ == "__main__":
+    extract(api_url, filepath)

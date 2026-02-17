@@ -52,7 +52,7 @@ etl-pipeline-with-python/
 
 ## Aechitecture Flow
 
-![Architecture flow](pipeline_countries\workflow.svg)
+![Architecture flow](pipeline_countries/workflow.svg)
 
 ---
 

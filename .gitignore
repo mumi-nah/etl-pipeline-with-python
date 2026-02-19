@@ -1,4 +1,2 @@
 .env
 code_test.ipynb
-.pytest_cache
-tests/__pycache__

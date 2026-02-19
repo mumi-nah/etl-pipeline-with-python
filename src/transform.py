@@ -1,17 +1,20 @@
 """
 Countries Data Transformation Script
 
-This script transform raw extracted countries into a clean format.
+This script transform raw extracted countries data into a clean format.
 """
 # Import necessary libraries
 import os
 import json
 import pandas as pd
+from dotenv import load_dotenv
 import logging
 
 logging.basicConfig(filename='pipeline.log',
                     level=logging.INFO,
                     format='%(asctime)s: %(levelname)s: %(message)s')
+
+load_dotenv()
 
 
 # HELPER FUNCTION
@@ -95,6 +98,5 @@ def transform(filepath):
 
 
 if __name__ == "__main__":
-    filepath = 'data/raw_countries_data.json'
+    filepath = os.getenv('RAW_DATA_PATH')
     clean_data = transform(filepath)
-    clean_data.to_csv('data/clean_data', index=False)

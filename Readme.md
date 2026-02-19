@@ -1,6 +1,6 @@
 # Building ETL Pipeline with Python
 
-This repository houses the scripts used in extracting data from the countries API, transforming it and loading it into a postgres Database.
+This repository houses the scripts and methodologies used in extracting data from the countries API, transforming it and loading it into a postgres Database.
 
 ---
 
@@ -50,7 +50,7 @@ etl-pipeline-with-python/
 
 ---
 
-## Aechitecture Flow
+## Architecture Flow
 
 ![Architecture flow](pipeline_countries/workflow.svg)
 
@@ -83,7 +83,7 @@ etl-pipeline-with-python/
 
 ```bash
 https://github.com/mumi-nah/etl-pipeline-with-python.git
-cd etl-pepeline-with-python
+cd etl-pipeline-with-python
 ```
 
 2. Install dependencies

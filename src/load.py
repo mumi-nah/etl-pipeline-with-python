@@ -16,6 +16,8 @@ logging.basicConfig(filename='pipeline.log',
                     level=logging.INFO,
                     format='%(asctime)s: %(levelname)s: %(message)s')
 
+load_dotenv()
+
 
 def get_engine():
     """
@@ -64,10 +66,14 @@ def load(clean_data, engine, save_csv=False, path_to_write=None):
 
 
 if __name__ == "__main__":
+    from transform import transform
+
+    filepath = os.getenv('RAW_DATA_PATH')
+    clean_data = transform(filepath)
+    path_to_write = os.getenv('PATH_TO_WRITE')
     engine = get_engine()
-    clean_data = 'transformed_data'
     if engine:
         load(
             clean_data, engine, save_csv=True,
-            path_to_write='data/clean_countries_data'
+            path_to_write=path_to_write
         )

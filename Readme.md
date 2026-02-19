@@ -34,6 +34,7 @@ This project implements a simple ETL (Extract, Transform, Load) pipeline in pyth
 
 ## Project Structure
 
+```bash
 etl-pipeline-with-python/
 │
 ├── src/
@@ -47,12 +48,13 @@ etl-pipeline-with-python/
 ├── pipeline.log
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
 ## Architecture Flow
 
-![Architecture flow](pipeline_countries/image/workflow.svg)
+![Architecture flow](image/workflow.svg)
 
 ---
 

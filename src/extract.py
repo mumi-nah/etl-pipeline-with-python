@@ -18,7 +18,10 @@ This script outputs a raw json file with the extracted countries data.
 
 import requests
 import json
+import os
+from dotenv import load_dotenv
 import logging
+
 
 logging.basicConfig(
     filename='pipeline.log',
@@ -26,9 +29,10 @@ logging.basicConfig(
     format='%(asctime)s: %(levelname)s: %(message)s'
 )
 
-api_url = "https://restcountries.com/v3.1/all?fields=name,independent,\
-unMember,idd,region,subregion,languages,area,population,continents"
-filepath = 'data/raw_countries_data.json'
+load_dotenv()
+
+api_url = os.getenv('API_URL')
+filepath = os.getenv('RAW_DATA_PATH')
 
 
 def extract(api_url, filepath):
@@ -38,7 +42,6 @@ def extract(api_url, filepath):
     :param api_url: link to the url using fields to specify fields
     :param filepath: output json file
 
-    :return: raw json dataset from the api saved to filepath"
     '''
     try:
         response = requests.get(api_url)

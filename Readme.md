@@ -97,6 +97,9 @@ pip install -r requirements.txt
 3. Environment Variables: create a .env file and add the following:
 
 ```bash
+API_URL=https://restcountries.com/v3.1/all?fields=name,independent,unMember,idd,region,subregion,languages,area,population,continents
+FILEPATH=your_filepath
+
 DB_USER=your_username
 DB_PASSWORD=your_password
 DB_HOST=localhost

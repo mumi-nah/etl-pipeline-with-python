@@ -70,9 +70,6 @@
 2026-02-16 22:28:49,918: INFO: Request to url returned: 200
 2026-02-16 22:28:49,968: INFO: Data successfully saved to data/raw_countries_data.json
 2026-02-16 22:29:09,175: INFO: Data transformed succesfully!
-2026-02-16 22:29:28,940: INFO: user=muminah, host=localhost, port=5432, db=countries_db
-2026-02-16 22:29:29,309: INFO: Database engine created successfully!
-2026-02-16 22:30:02,325: INFO: user=muminah, host=localhost, port=5432, db=countries_db
 2026-02-16 22:30:02,411: INFO: Database engine created successfully!
 2026-02-16 22:30:02,412: ERROR: Failed to load data, 'str' object has no attribute 'to_csv'
 2026-02-16 22:33:08,396: INFO: Database engine created successfully!
@@ -83,5 +80,3 @@
 2026-02-16 22:37:56,802: INFO: Database engine created successfully!
 2026-02-16 22:37:56,808: INFO: Data saved to csv at data/clean_countries_data
 2026-02-16 22:37:57,017: INFO: Data loaded into postgres succeesfully!
-2026-02-17 17:46:34,497: INFO: Request to url returned: 200
-2026-02-17 17:46:34,533: INFO: Data successfully saved to data/raw_countries_data.json

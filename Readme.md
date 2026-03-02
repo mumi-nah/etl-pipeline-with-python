@@ -1,6 +1,6 @@
 # Building ETL Pipeline with Python
 
-This repository houses the scripts and methodologies used in extracting data from the countries API, transforming it and loading it into a postgres Database.
+This repository houses the scripts and methodologies used in building an **Extract Transform Load (ETL)** pipeline from a countries API. This data forms the foundation for recommending travel destinations to customers based on factors such as: Continent & Region, Languages, Currency and other attributes. 
 
 ---
 
@@ -19,7 +19,10 @@ This repository houses the scripts and methodologies used in extracting data fro
 
 ## Overview
 
-This project implements a simple ETL (Extract, Transform, Load) pipeline in python. It extracts country data from the [REST Countries API](https://restcountries.com/v3.1/all), cleans and transforms the data, such as creating a standard calling code, add a column that counts languages spoken in each country, and loads into a postgeSQL database for storage and further analysis.
+The goal of this ETL pipeline is to extract country data from the API, transform it into a clean, structured format, and load it into a PostgreSQL database for downstream analytics and recommendation systems.
+- It extracts country data from the [REST Countries API](https://restcountries.com/v3.1/all), 
+- cleans and transforms the data, such as creating a standard calling code, add a column that counts languages spoken in each country, and 
+- loads into a postgeSQL database for storage and further analysis.
 
 ---
 
@@ -29,6 +32,12 @@ This project implements a simple ETL (Extract, Transform, Load) pipeline in pyth
 - Cleans and transforms the data
 - Loads the clean data to a postgres database and csv for further analysis
 - Modular and configurable pipeline using environment variables for replication
+
+---
+
+## Architecture Flow
+
+![Architecture flow](image/workflow.svg)
 
 ---
 
@@ -49,12 +58,66 @@ etl-pipeline-with-python/
 ├── requirements.txt
 └── README.md
 ```
+---
+
+# Technologies Used
+
+Python: Main programming language
+Pandas: For data cleaning and manipulation
+Requests: For API calls
+PostgreSQL: For loading data into database
 
 ---
 
-## Architecture Flow
+## Project Setup
+---
+### Prerequisites
+Before running the project, make sure you have the following:
+1. Python 3.8 or higher installed on your system
+2. PostgreSQL installed on your system
+3. pip to install Python dependencies from requirements.txt.
+4. A code editor like VS Code or Sublime Text to write and run Python scripts.
 
-![Architecture flow](image/workflow.svg)
+### Installation
+
+1. Clone the repo
+
+```bash
+https://github.com/mumi-nah/etl-pipeline-with-python.git
+cd etl-pipeline-with-python
+```
+
+2. Install the required dependencies
+
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Environment Variables: create a .env file and add the following:
+
+
+```bash
+API_URL=https://restcountries.com/v3.1/all?fields=name,independent,unMember,idd,region,subregion,languages,area,population,continents
+FILEPATH=your_filepath
+
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=database_name
+```
+Replace `your_filepath`, `your_username`, `your_password` and `database_name` with your actual credentaials.
+
+4. Run the pipeline
+
+```bash
+from src.extract import extract
+from src.transform import transform
+from src.load import get_engine, load
+```
+
+Verify the postgres conection to ensure the data has been loaded
 
 ---
 
@@ -79,43 +142,17 @@ etl-pipeline-with-python/
 
 ---
 
-## Project Setup
+## Usage
+- Activate your virtual environment (IDE)
+- Ensure your .env file contains your countries API url, file path and postgres credentials.
+- Run the ETL scripts 
 
-1. Clone the repo
-
-```bash
-https://github.com/mumi-nah/etl-pipeline-with-python.git
-cd etl-pipeline-with-python
 ```
-
-2. Install dependencies
-
-```bash
-pip install -r requirements.txt
+src.extract()
+src.transform()
+src.load()
 ```
-
-3. Environment Variables: create a .env file and add the following:
-
-```bash
-API_URL=https://restcountries.com/v3.1/all?fields=name,independent,unMember,idd,region,subregion,languages,area,population,continents
-FILEPATH=your_filepath
-
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=database_name
-```
-
-4. Run the pipeline
-
-```bash
-from src.extract import extract
-from src.transform import transform
-from src.load import get_engine, load
-```
-
-Verify the postgres conection to ensure the data has been loaded
+Open postgreSQL to confirm the data has been loaded correctly.
 
 ---
 
@@ -128,6 +165,9 @@ All pipeline activitiy is logged in pipeline.log
 2026-02-16 22:31: INFO: Data transformed successfully!
 2026-02-16 22:32: INFO: Data loaded into Postgres successfully
 ```
+
+# Future Enhancement
+Integrate visualization tools to create dashboards from the extracted data. 
 
 ## Resources
 

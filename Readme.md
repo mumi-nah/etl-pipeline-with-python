@@ -8,11 +8,17 @@ This repository houses the scripts and methodologies used in building an **Extra
 
 - [Overview](#overview)
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [Architecture Flow](#architecture-flow)
-- [How it works](#how-it-works)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
 - [Project Setup](#project-setup)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Environment Variables](#environment-variables)
+- [How it works](#how-it-works)
+- [Usage](#Usage)
 - [Logging](#logging)
+- [Future Enhancement](#future-enhancement)
 - [Resources](#resources)
 
 ---
@@ -60,7 +66,7 @@ etl-pipeline-with-python/
 ```
 ---
 
-# Technologies Used
+## Technologies Used
 
 Python: Main programming language
 Pandas: For data cleaning and manipulation
@@ -89,13 +95,12 @@ cd etl-pipeline-with-python
 
 2. Install the required dependencies
 
-
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Environment Variables: create a .env file and add the following:
-
+### Environment Variables
+create a .env file and add the following:
 
 ```bash
 API_URL=https://restcountries.com/v3.1/all?fields=name,independent,unMember,idd,region,subregion,languages,area,population,continents
@@ -108,16 +113,6 @@ DB_PORT=5432
 DB_NAME=database_name
 ```
 Replace `your_filepath`, `your_username`, `your_password` and `database_name` with your actual credentaials.
-
-4. Run the pipeline
-
-```bash
-from src.extract import extract
-from src.transform import transform
-from src.load import get_engine, load
-```
-
-Verify the postgres conection to ensure the data has been loaded
 
 ---
 

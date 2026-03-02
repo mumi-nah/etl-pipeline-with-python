@@ -68,10 +68,10 @@ etl-pipeline-with-python/
 
 ## Technologies Used
 
-Python: Main programming language
-Pandas: For data cleaning and manipulation
-Requests: For API calls
-PostgreSQL: For loading data into database
+1. Python: Main programming language
+2. Pandas: For data cleaning and manipulation
+3. Requests: For API calls
+4. PostgreSQL: For loading data into database
 
 ---
 
@@ -153,7 +153,7 @@ Open postgreSQL to confirm the data has been loaded correctly.
 
 ### Logging
 
-All pipeline activitiy is logged in pipeline.log
+All pipeline activitiies are logged in `pipeline.log`
 
 ```bash
 2026-02-16 22:30: INFO: Data successfully saved to raw_countries_data.json
